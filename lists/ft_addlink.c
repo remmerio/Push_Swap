@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_b.c                                        :+:      :+:    :+:   */
+/*   ft_addlink.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbellard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 16:43:23 by mbellard          #+#    #+#             */
-/*   Updated: 2024/04/16 16:43:25 by mbellard         ###   ########.fr       */
+/*   Created: 2024/04/19 17:58:50 by mbellard          #+#    #+#             */
+/*   Updated: 2024/04/19 17:58:53 by mbellard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// pb (push b) : take the first element at the top of a and put it 
-// at the top of b. Do nothing if a is empty.
-void	ft_push_b(t_stack **stack_a, t_stack **stack_b, int i)
+// Aggiunge un nuovo anello con dentro un numero intero ed un puntatore al pross
+// imo anello
+t_stack	*ft_addlink(long n)
 {
-	t_stack	*tmp;
+	t_stack	*link;
 
-	if (!*stack_a)
-		return ;
-	tmp = *stack_a;
-	*stack_b = *stack_a;
-	*stack_a = (*stack_a)->next;
-	(*stack_b)->next = tmp;
-	if (i == 0)
-		ft_putendl_fd("pb", 1);
+	link = malloc(sizeof(t_stack));
+	if (!link)
+		return (ft_error("Error: NEW LINK NOT ADDED"));
+	link->n = n;
+	link->next = NULL;
+	return (link);
 }

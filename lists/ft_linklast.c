@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   circular_stack.c                                   :+:      :+:    :+:   */
+/*   ft_linklast.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbellard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 19:49:30 by mbellard          #+#    #+#             */
-/*   Updated: 2024/03/23 19:49:33 by mbellard         ###   ########.fr       */
+/*   Created: 2024/04/19 20:24:57 by mbellard          #+#    #+#             */
+/*   Updated: 2024/04/19 20:24:59 by mbellard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "../includes/push_swap.h"
 
-void	circular_stack(struct node *head)
+// Ritorna l'ultimo elemento della stack
+t_stack	*ft_linklast(t_stack *link);
 {
-	struct node	*current;
-
-	current = head;
-	while (current->next != NULL)
-		current = current->next;
-	current->next = head;
+	if (!link)
+		return (NULL);
+	while (link->netx)
+		link = link->next;
+	return (link);
 }
-
-// this function make circular my linked list

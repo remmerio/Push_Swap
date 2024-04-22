@@ -13,13 +13,14 @@
 #include "../includes/utils.h"
 #include "../libft/libft.h"
 
-
 void	ft_check(int argc, char *argv[])
 {
 	char	**mtx;
-	int	i;
+	int		i;
 
-	if (argc == 2)
+	if (argc < 2)
+		ft_error("Error: Invalid_Arguments");
+	else if (argc == 2)
 	{
 		mtx = ft_split(argv[1], ' ');
 		argc = ft_mtxlen(mtx);

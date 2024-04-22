@@ -16,13 +16,16 @@
 // STACK
 typedef struct node
 {
-	int				data;
-	struct node		*next;
-}		t_stack;
+	long	num;
+	long	posix;
+	struct node	*next;
+	struct node	*prev;
+}	t_stack;
 
 # include "../libft/libft.h"
-# include "moves.h"
 # include "utils.h"
+# include "lists.h"
+# include "moves.h"
 
 // MAIN
 int	main(int argc, char *argv[]);

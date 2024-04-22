@@ -15,20 +15,11 @@
 int	main(int argc, char *argv[])
 {
 	t_stack	*stack_a;
-	t_stack	*stack_b;
 
-	if (argc < 2)
-	{
-		ft_putstr_fd("\n\tError: Invalid_Arguments\n\n", 2);
-		return (-1);
-	}
 	ft_check(argc, argv);
-	stack_a = (t_stack *)malloc(sizeof(t_stack));
-	stack_b = (t_stack *)malloc(sizeof(t_stack));
 	stack_a = ft_fill_stack(argc, argv);
-	stack_b = NULL;
-	// qui devo inizializzare le stack
-	free(stack_a);
-	free(stack_b);
+	if(!issorted(stack_a));
+		ft_sort(&stack_a);
+	ft_freelink(&stack_a);
 	return (0);
 }

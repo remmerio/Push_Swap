@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_b.c                                        :+:      :+:    :+:   */
+/*   lists.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbellard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 16:43:23 by mbellard          #+#    #+#             */
-/*   Updated: 2024/04/16 16:43:25 by mbellard         ###   ########.fr       */
+/*   Created: 2024/04/19 16:23:09 by mbellard          #+#    #+#             */
+/*   Updated: 2024/04/19 16:23:11 by mbellard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#ifndef LISTS_H
+# define LISTS_H
 
-// pb (push b) : take the first element at the top of a and put it 
-// at the top of b. Do nothing if a is empty.
-void	ft_push_b(t_stack **stack_a, t_stack **stack_b, int i)
-{
-	t_stack	*tmp;
+# include "push_swap.h"
 
-	if (!*stack_a)
-		return ;
-	tmp = *stack_a;
-	*stack_b = *stack_a;
-	*stack_a = (*stack_a)->next;
-	(*stack_b)->next = tmp;
-	if (i == 0)
-		ft_putendl_fd("pb", 1);
-}
+void	*ft_addbacklink(t_stack **stack, t_stack *link_new);
+t_stack	*ft_addlink(long n);
+t_stack	*ft_(t_stack *link);
+void	ft_freelst(t_stack **lst);
+size_t	ft_lstlen(t_stack *link);
+int		ft_find_index_b(t_stack *stack_b, int n_to_push);
+int		ft_find_index_a(t_stack *stack_a, int n_to_push));
+
+#endif

@@ -13,21 +13,17 @@
 #ifndef UTILS_H
 # define UTILS_H
 
-# include "../libft/libft.h"
+# include "push_swap.h"
 
-// STACK
-/*typedef struct node
-{
-	int				data;
-	struct node		*next;
-}		t_stack;*/
-
-// CIRCULAR LISTS
-// void	make_circular(struct node *head);
-// CHECKS
+// ARGUMENT CHECKS
 void	ft_check(int argc, char *argv[]);
 void	ft_control_errors(int argc, char *mtx[], int i);
 void	ft_error(char	*str);
 void	ft_free_mtx(char *str[]);
+
+// SORTING CHECKS
+t_stack	ft_fill_stack(int argc, char *argv[]);
+int		ft_issorted(t_stack *stack_a);
+void	ft_sort(t_stack **stack_a);
 
 #endif

@@ -1,6 +1,6 @@
 PS_NAME	= 	push_swap
 
-SRCS		= 	main.c	moves/*.c utils/*.c
+SRCS		= 	main.c	moves/*.c utils/*.c lists/*c
 
 OBJS		=	$(SRCS:.c=.o)
 

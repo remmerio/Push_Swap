@@ -15,10 +15,10 @@
 // This function sort and push stacks until 3 members left behind.
 t_stack	ft_sortbtilla3(t_stack **stack_a, t_stack **stack_b)
 {
-	int		i;
 	t_stack	*tmp;
+	int		i;
 
-	while (ft_lstlen(*stack_a) > 3 && !ft_issorted(*stack_a))
+	while ((ft_lstlen(*stack_a) > 3) && !ft_issorted(*stack_a))
 	{
 		tmp = *stack_a;
 		i = ft_rotab_push_b(*stack_a, *stack_b);

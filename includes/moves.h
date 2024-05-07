@@ -32,6 +32,9 @@ int		ft_rev_rotate_ab(t_stack **down_a, t_stack **down_b);
 int		ft_rot_ab_push_b(t_stack *stack_a, t_stack *stack_b);
 
 // CASES
-int		ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long);
+int		ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long i);
+int		ft_if_rarb(t_stack *stack_a, t_stack *stack_b, long i);
+int		ft_if_rarrb(t_stack *stack_a, t_stack *stack_b, long i);
+int		ft_if_rrarb(t_stack *stack_a, t_stack *stack_b, long i);
 
 #endif

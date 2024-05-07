@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lists.h                                            :+:      :+:    :+:   */
+/*   ft_if_rrarb.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbellard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 16:23:09 by mbellard          #+#    #+#             */
-/*   Updated: 2024/04/19 16:23:11 by mbellard         ###   ########.fr       */
+/*   Created: 2024/04/26 17:12:59 by mbellard          #+#    #+#             */
+/*   Updated: 2024/04/26 17:13:04 by mbellard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LISTS_H
-# define LISTS_H
+#include "../includes/push_swap.h"
 
-# include "push_swap.h"
+// This function returns an integer equal to how many times the stacks rotate together.
+int	ft_if_rrarb(t_stack *stack_a, t_stack *stack_b, long i)
+{
+	int	j;
 
-void	*ft_addbacklink(t_stack **stack, t_stack *link_new);
-t_stack	*ft_addlink(long n);
-t_stack	*ft_(t_stack *link);
-void	ft_freelst(t_stack **lst);
-size_t	ft_lstlen(t_stack *link);
-int		ft_check_posix(t_stack *link, long i);
-int		ft_nummin(t_stack *link);
-int		ft_nummax(t_stack *link);
-
-#endif
+	j = 0;
+	if (ft_check_posix(stack_a, i))
+		j =ft_lstlen(stacc_a) - ft_check_posix(stack_a, i);
+	j = ft_check_posix(stack_b, i) + j;
+	return (j);
+}

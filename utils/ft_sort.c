@@ -13,21 +13,25 @@
 #include "../includes/push_swap.h"
 
 // This function sort and push stacks until 3 members left behind.
-t_stack	ft_sortbtilla3(t_stack **stack_a, t_stack **stack_b)
+void	ft_sortbtilla3(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack	*tmp;
 	int		i;
+	t_stack	*tmp;
 
-	while ((ft_lstlen(*stack_a) > 3) && !ft_issorted(*stack_a))
+	while (ft_lstlen(*stack_a) > 3 && !ft_issorted(*stack_a))
 	{
 		tmp = *stack_a;
 		i = ft_rotab_push_b(*stack_a, *stack_b);
 		while (i >= 0)
 		{
-			if ()
-			else if ()
-			else if ()
-			else if ()
+			if (i == ft_if_rarb(*stack_a, stack_b, tmp->num))
+			i = ft_APPLY_RARB(stack_a, stack_b, tmp->num, 'a');
+			else if (i == ft_if_rrarrb(*stack_a, stack_b, tmp->num))
+			i = ft_APPLY_RRARRB(stack_a, stack_b, tmp->num, 'a');
+			else if (i == ft_if_rarrb(*stack, *stack_b, tmp->num))
+			i = ft_APPLY_RARRB(stack_a, stack_b, tmp->num, 'a');
+			else if (i == ft_if_rrarb(*stack_a, *stack_b, tmp->num))
+			i = ft_APPLY_RRARB(stack_a, stack_b, tmp->num, 'a');
 			else
 				tmp = tmp->next;
 		}

@@ -22,9 +22,9 @@ int	ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long i)
 	int		j;
 
 	j = 0;
-	if (ft_(stack_b, i))
-		j = ft_lstlen(stack_b) - ft_(stack_b, i);
-	if ((j < (ft_lstlen(stack_a) - ft__(stack_a, i)) && ft__(stack_a, i))
-		j = ft_lstlen(stack_a) - ft__(stack_a, i);
+	if (ft_check_posix_b(stack_b, i))
+		j = ft_lstlen(stack_b) - ft_check_posix_b(stack_b, i);
+	if ((j < (ft_lstlen(stack_a) - ft_check_posix(stack_a, i)) && ft_check_posix(stack_a, i))
+		j = ft_lstlen(stack_a) - ft_check_posix(stack_a, i);
 	return (j);
 }

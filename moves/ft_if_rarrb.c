@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lists.h                                            :+:      :+:    :+:   */
+/*   ft_if_rarrb.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbellard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 16:23:09 by mbellard          #+#    #+#             */
-/*   Updated: 2024/04/19 16:23:11 by mbellard         ###   ########.fr       */
+/*   Created: 2024/04/26 16:43:19 by mbellard          #+#    #+#             */
+/*   Updated: 2024/04/26 16:43:31 by mbellard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LISTS_H
-# define LISTS_H
+#include "../includes/push_swap.h"
 
-# include "push_swap.h"
+int	ft_if_rarrb(t_stack *stack_a, t_stack *stack_b, long i)
+{
+	int	j;
 
-void	*ft_addbacklink(t_stack **stack, t_stack *link_new);
-t_stack	*ft_addlink(long n);
-t_stack	*ft_(t_stack *link);
-void	ft_freelst(t_stack **lst);
-size_t	ft_lstlen(t_stack *link);
-int		ft_check_posix(t_stack *link, long i);
-int		ft_nummin(t_stack *link);
-int		ft_nummax(t_stack *link);
-
-#endif
+	j = 0;
+	if (ft_check_posix_b(stack_b, i))
+		j = ft_lstlen(stack_b) - ft_check_posix_b(stack_b, i);
+	j = ft_check_posix(stack_a, i) + j;
+	return (j);
+}

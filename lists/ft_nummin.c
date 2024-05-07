@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lists.h                                            :+:      :+:    :+:   */
+/*   ft_nummin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbellard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 16:23:09 by mbellard          #+#    #+#             */
-/*   Updated: 2024/04/19 16:23:11 by mbellard         ###   ########.fr       */
+/*   Created: 2024/04/26 15:42:22 by mbellard          #+#    #+#             */
+/*   Updated: 2024/04/26 15:42:25 by mbellard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LISTS_H
-# define LISTS_H
+#include "../includes/push_swap.h"
 
-# include "push_swap.h"
+int	ft_nummin(t_stack *link)
+{
+	int	i;
 
-void	*ft_addbacklink(t_stack **stack, t_stack *link_new);
-t_stack	*ft_addlink(long n);
-t_stack	*ft_(t_stack *link);
-void	ft_freelst(t_stack **lst);
-size_t	ft_lstlen(t_stack *link);
-int		ft_check_posix(t_stack *link, long i);
-int		ft_nummin(t_stack *link);
-int		ft_nummax(t_stack *link);
-
-#endif
+	i = link->num;
+	while (link)
+	{
+		if (link->num < i)
+			i = link->num;
+		link = link->next;
+	}
+	return (i);
+}

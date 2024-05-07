@@ -14,7 +14,7 @@
 
 // This function decides which rotation combination is best to use to sort the
 // stack before the push to B is done.
-int	ft_rot_ab_push_b(t_stack *stack_a, t_stack stack_b)
+int	ft_rotab_push_b(t_stack *stack_a, t_stack stack_b)
 {
 	int		i;
 	t_stack	*tmp;
@@ -23,9 +23,15 @@ int	ft_rot_ab_push_b(t_stack *stack_a, t_stack stack_b)
 	i = ft_if_rrarrb(stack_a, stack_b, stack_a->num);
 	while (tmp)
 	{
-		if (ft_if_rarb(stack_a, stack_b, stack_a->num))
-		
+		if (i > ft_if_rarb(stack_a, stack_b, tmp->num))
+			i = ft_if_rarb(stack_a, stack_b, tmp->num);
+		if (i > ft_if_rrarrb(stack_a, stack_b, tmp->num))
+			i = ft_if_rrarrb(stack_a, stack_b, tmp->num);
+		if (i > ft_if_rarrb(stack_a, stack_b, tmp->nu))
+			i = ft_if_rarrb(stack_a, stack_b, tmp->num);
+		if (i > ft_if_rrarb(stack_a, stack_b, tmp->nu))
+			i = ft_if_rrarb(stack_a, stack_b, tmp->num);
+		tmp = tmp->next;
 	}
 	return (i);
 }
-

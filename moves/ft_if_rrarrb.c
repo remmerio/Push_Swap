@@ -17,14 +17,30 @@
 // rotation. Since here we have reverse rotate,rather than index number,
 // we check reverse index number which is 
 // calculated by list_size - index_number.
-int	ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long i)
+int	ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long n)
 {
-	int		j;
+	int		i;
 
-	j = 0;
-	if (ft_check_posix_b(stack_b, i))
-		j = ft_lstlen(stack_b) - ft_check_posix_b(stack_b, i);
-	if ((j < (ft_lstlen(stack_a) - ft_check_posix(stack_a, i)) && ft_check_posix(stack_a, i))
-		j = ft_lstlen(stack_a) - ft_check_posix(stack_a, i);
-	return (j);
+	i = 0;
+	if (ft_check_posix_b(stack_b, n))
+		i = ft_lstlen(stack_b) - ft_check_posix_b(stack_b, n);
+	if (i < (ft_lstlen(stack_a) - ft_check_posix(stack_a, n))
+		&& ft_check_posix(stack_a, n))
+		i = ft_lstlen(stack_a) - ft_check_posix(stack_a, n);
+	return (i);
+}
+
+// This function calculates the required amount of rotation.
+// Calculations are done for rra+rrb case.
+int	ft_if_rrarrb_a(t_stack *a, t_stack *b, long n)
+{
+	int	i;
+
+	i = 0;
+	if (ft_check_posix_a(stack_a, n))
+		i = ft_lstsize(stack_a) - ft_check_posix_a(stack_a, n);
+	if (i < (ft_lstsize(stack_b) - ft_check_posix(stack_b, n))
+		&& ft_check_posix(stack_b, n))
+		i = ft_lstsize(stack_b) - ft_check_posix(stack_b, n);
+	return (i);
 }

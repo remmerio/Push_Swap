@@ -22,8 +22,18 @@ void	ft_error(char	*str);
 void	ft_free_mtx(char *str[]);
 
 // SORTING CHECKS
-t_stack	ft_fill_stack(int argc, char *argv[]);
+t_stack	*ft_fill_stack(int argc, char *argv[]);
 int		ft_issorted(t_stack *stack_a);
 void	ft_sort(t_stack **stack_a);
+void	ft_sort_three(t_stack **stack_a);
+
+// POSITION CHECKS
+int	ft_check_posix(t_stack *link, long i);
+int	ft_check_posix_a(t_stack *stack_a, long i);
+int	ft_check_posix_b(t_stack *stack_b, long i);
+
+// COUNT ROTATION CHECKS
+int		ft_n_rotba(t_stack *stack_a, t_stack *stack_b);
+int		ft_n_rotab(t_stack *stack_a, t_stack *stack_b);
 
 #endif

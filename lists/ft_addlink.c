@@ -20,8 +20,8 @@ t_stack	*ft_addlink(long n)
 
 	link = malloc(sizeof(t_stack));
 	if (!link)
-		return (ft_error("Error: NEW LINK NOT ADDED"));
-	link->n = n;
+		ft_error("Error");
+	link->num = n;
 	link->next = NULL;
 	return (link);
 }

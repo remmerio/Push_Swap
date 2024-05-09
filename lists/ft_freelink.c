@@ -21,7 +21,7 @@ void	ft_freelink(t_stack **link)
 	while (*link)
 	{
 		tmp = (*link)->next;
-		(*link)->n = 0;
+		(*link)->num = 0;
 		free(*link);
 		*link = tmp;
 	}

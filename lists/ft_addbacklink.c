@@ -13,7 +13,7 @@
 #include "../includes/push_swap.h"
 
 // Attacca un anello alla fine della catena
-void	*ft_addbacklink(t_stack **link, t_stack *link_new)
+void	ft_addbacklink(t_stack **link, t_stack *link_new)
 {
 	if (!link)
 		return ;

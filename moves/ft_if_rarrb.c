@@ -12,13 +12,26 @@
 
 #include "../includes/push_swap.h"
 
-int	ft_if_rarrb(t_stack *stack_a, t_stack *stack_b, long i)
+int	ft_if_rarrb(t_stack *stack_a, t_stack *stack_b, long n)
 {
-	int	j;
+	int	i;
 
-	j = 0;
-	if (ft_check_posix_b(stack_b, i))
-		j = ft_lstlen(stack_b) - ft_check_posix_b(stack_b, i);
-	j = ft_check_posix(stack_a, i) + j;
-	return (j);
+	i = 0;
+	if (ft_check_posix_b(stack_b, n))
+		i = ft_lstlen(stack_b) - ft_check_posix_b(stack_b, n);
+	i = ft_check_posix(stack_a, n) + i;
+	return (i);
+}
+
+// This function calculates the required amount of rotation.
+// Calculations are done for ra+rrb case.
+int	ft_if_rarrb_a(t_stack *stack_a, t_stack *stack_b, long n)
+{
+	int	i;
+
+	i = 0;
+	if (ft_check_posix(stack_b, n))
+		i = ft_lstsize(stack_b) - ft_check_posix(stack_b, n);
+	i = ft_check_posix_a(stack_a, n) + i;
+	return (i);
 }

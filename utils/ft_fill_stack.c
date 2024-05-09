@@ -12,12 +12,12 @@
 
 #include "../includes/push_swap.h"
 
-t_stack	ft_fill_stack(int argc, char *argv[])
+t_stack	*ft_fill_stack(int argc, char *argv[])
 {
 	t_stack		*stack_a;
 	char		**mtx;
 	int			i;
-	long			j;
+	long			n;
 
 	stack_a = NULL;
 	i = 0;
@@ -31,11 +31,11 @@ t_stack	ft_fill_stack(int argc, char *argv[])
 		mtx = argv;
 		i = 1;
 	}
-	j = 0;
+	n = 0;
 	while (i < argc)
 	{
-		j = ft_atol(mtx[i]);
-		ft_addbacklink(&stack_a, ft_addlink(j));
+		n = ft_atol(mtx[i]);
+		ft_addbacklink(&stack_a, ft_addlink(n));
 		i++;
 	}
 	ft_free_mtx(mtx);

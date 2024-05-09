@@ -13,12 +13,24 @@
 #include "../includes/push_swap.h"
 
 // This function returns an integer equal to how many times the stacks rotate together.
-int	ft_if_rarb(t_stack *stack_a, t_stack *stack_b, long i)
+int	ft_if_rarb(t_stack *stack_a, t_stack *stack_b, long n)
 {
-	int	j;
+	int	i;
 
-	j = ft_check_posix_b(stack_b, i);
-	if (j < ft_check_posix(stack_a, i))
-		j = ft_check_posix(stack_a, i);
-	return (j);
+	i = ft_check_posix_b(stack_b, n);
+	if (i < ft_check_posix(stack_a, n))
+		i = ft_check_posix(stack_a, n);
+	return (i);
+}
+
+// This function calculates the required amount of rotation.
+// Calculations are done for ra+rb case.
+int	ft_if_rarb_a(t_stack *stack_a, t_stack *stack_b, long n)
+{
+	int	i;
+
+	i = ft_check_posix_a(stack_a, n);
+	if (i < ft_check_posix(stack_b, n))
+		i = ft_check_posix(stack_b, n);
+	return (i);
 }

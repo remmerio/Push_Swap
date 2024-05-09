@@ -9,7 +9,7 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 	ft_printf.c ft_print_c.c ft_print_str.c ft_print_int.c ft_print_uint.c \
-	ft_print_hex.c ft_gnl.c ft_gnl_utils.c ft_atol.c ft_mtxlen.c\
+	ft_print_hex.c ft_gnl.c ft_gnl_utils.c ft_atol.c ft_mtxlen.c \
 	ft_atoi_limits.c
 	
 OBJS = $(SRCS:.c=.o)

@@ -13,11 +13,11 @@
 #include "../includes/push_swap.h"
 
 // Ritorna l'ultimo elemento della stack
-t_stack	*ft_linklast(t_stack *link);
+t_stack	*ft_linklast(t_stack *link)
 {
 	if (!link)
 		return (NULL);
-	while (link->netx)
+	while (link->next)
 		link = link->next;
 	return (link);
 }

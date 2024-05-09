@@ -18,7 +18,7 @@ int	main(int argc, char *argv[])
 
 	ft_check(argc, argv);
 	stack_a = ft_fill_stack(argc, argv);
-	if(!issorted(stack_a));
+	if(!ft_issorted(stack_a))
 		ft_sort(&stack_a);
 	ft_freelink(&stack_a);
 	return (0);

@@ -12,8 +12,8 @@
 
 #include "../includes/push_swap.h"
 
-// pb (push b) : take the first element at the top of a and put it 
-// at the top of b. Do nothing if a is empty.
+// pb: take the first element at the top of stack_a and put it at the top of
+// stack_b. Do nothing if a is empty.
 void	ft_push_b(t_stack **stack_a, t_stack **stack_b, int i)
 {
 	t_stack	*tmp;

@@ -15,12 +15,12 @@
 
 # include "push_swap.h"
 
-void	*ft_addbacklink(t_stack **stack, t_stack *link_new);
+void	ft_addbacklink(t_stack **stack, t_stack *link_new);
 t_stack	*ft_addlink(long n);
-t_stack	*ft_(t_stack *link);
-void	ft_freelst(t_stack **lst);
+t_stack	*ft_linklast(t_stack *link);
+void	ft_freelink(t_stack **link);
 size_t	ft_lstlen(t_stack *link);
-int		ft_check_posix(t_stack *link, long i);
+int		ft_check_posix(t_stack *link, long n);
 int		ft_nummin(t_stack *link);
 int		ft_nummax(t_stack *link);
 

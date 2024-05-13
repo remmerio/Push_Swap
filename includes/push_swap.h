@@ -25,7 +25,7 @@ typedef struct node
 # include "../libft/libft.h"
 
 // MAIN
-int	main(int argc, char *argv[]);
+int		main(int argc, char *argv[]);
 
 // LIST TOOLS
 void	ft_addbacklink(t_stack **stack, t_stack *link_new);
@@ -64,7 +64,7 @@ int		ft_if_rrarb_a(t_stack *stack_a, t_stack *stack_b, long n);
 int		ft_use_rrarrb(t_stack **stack_a, t_stack **stack_b, long n, char c);
 int		ft_use_rarb(t_stack **stack_a, t_stack **stack_b, long n, char c);
 int		ft_use_rarrb(t_stack **stack_a, t_stack **stack_b, long n, char c);
-int		ft_use_rarrb(t_stack **stack_a, t_stack **stack_b, long n, char c);
+int		ft_use_rrarb(t_stack **stack_a, t_stack **stack_b, long n, char c);
 
 // ARGUMENT CHECKS
 void	ft_check(int argc, char *argv[]);
@@ -79,9 +79,9 @@ void	ft_sort(t_stack **stack_a);
 void	ft_sort_three(t_stack **stack_a);
 
 // POSITION CHECKS
-int	ft_check_posix(t_stack *link, long i);
-int	ft_check_posix_a(t_stack *stack_a, long i);
-int	ft_check_posix_b(t_stack *stack_b, long i);
+int		ft_check_posix(t_stack *link, long i);
+int		ft_check_posix_a(t_stack *stack_a, long i);
+int		ft_check_posix_b(t_stack *stack_b, long i);
 
 // COUNT ROTATION CHECKS
 int		ft_n_rotba(t_stack *stack_a, t_stack *stack_b);

@@ -26,13 +26,13 @@ int	ft_n_rotba(t_stack *stack_a, t_stack *stack_b)
 	while (tmp)
 	{
 		if (i > ft_if_rarb_a(stack_a, stack_b, tmp->num))
-			i = ft_if_rarb_a(a, b, tmp->num);
-		if (i > ft_if_rrarrb_a(a, b, tmp->num))
-			i = ft_if_rrarrb_a(a, b, tmp->num);
-		if (i > ft_if_rarrb_a(a, b, tmp->num))
-			i = ft_if_rarrb_a(a, b, tmp->num);
-		if (i > ft_if_rrarb_a(a, b, tmp->num))
-			i = ft_if_rrarb_a(a, b, tmp->num);
+			i = ft_if_rarb_a(stack_a, stack_b, tmp->num);
+		if (i > ft_if_rrarrb_a(stack_a, stack_b, tmp->num))
+			i = ft_if_rrarrb_a(stack_a, stack_b, tmp->num);
+		if (i > ft_if_rarrb_a(stack_a, stack_b, tmp->num))
+			i = ft_if_rarrb_a(stack_a, stack_b, tmp->num);
+		if (i > ft_if_rrarb_a(stack_a, stack_b, tmp->num))
+			i = ft_if_rrarb_a(stack_a, stack_b, tmp->num);
 		tmp = tmp->next;
 	}
 	return (i);

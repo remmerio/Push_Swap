@@ -1,56 +1,55 @@
-PS_NAME		= 	push_swap
+NAME		= push_swap
 
-SRC_1		=	main.c
+CC		= cc
 
-SRC_2		=	./lists/ft_addbacklink.c lists/ft_addlink.c lists/ft_check_posix.c \
-			lists/freelink.c lists/linklast.c lists/listlen.c ft_nummax.c \
-			ft_nummin.c
+CFLAGS		= -Wall -Wextra -Werror
 
-SRC_3		=	moves/ft_if_rarb.c moves/ft_if_rarrb.c moves/ft_if_rrarb.c \
-			moves/ft_push_a.c moves/ft_push_b.c moves/ft_rev_rotate_ab.c \
-			moves/ft_swap_ab.c moves/ft_use_rarb.c moves/ft_use_rarrb.c \
-			moves/ft_use_rrarb.c moves/ft_use_rrarrb.c
+LIBFT_PATH	= libft/
 
-SRC_4		=	utils/ft_check.c utils/ft_check_posix.c utils/ft_control_errors.c \
-			utils/ft_error.c utils/ft_fill_stack.c utils/ft_free_mtx.c \
-			utils/ft_issorted.c utils/ft_n_rot.c utils/ft_sort.c \
-			utils/ft_sort_three.c
+LIST_PATH	= lists/
 
-OBJS_1		=	${SRC_1:.c=.o}
+MOVES_PATH	= moves/
 
-OBJS_2		=	${SRC_2:.c=.o}
+UTILS_PATH	= utils/
 
-OBJS_3		=	${SRC_3:.c=.o}
 
-OBJS_4		=	${SRC_4:.c=.o}
+INCLUDE_PATH 	= includes/
 
-INCLUDE		=	-L ./libft -lft
+SRC_1 		= main.c
 
-CC		=	cc
+SRC_2 		= $(addprefix $(LIST_PATH), ft_addbacklink.c ft_addlink.c \
+		  ft_freelink.c ft_linklast.c ft_lstlen.c ft_nummax.c ft_nummin.c)
+			
+SRC_3		= $(addprefix $(MOVES_PATH), ft_if_rarb.c ft_if_rarrb.c ft_if_rrarb.c \
+		  ft_push_a.c ft_push_b.c ft_rev_rotate_ab.c ft_swap_ab.c \
+		  ft_use_rarb.c ft_use_rarrb.c ft_use_rrarb.c ft_use_rrarrb.c)
+			
+SRC_4		= $(addprefix $(UTILS_PATH), ft_check.c ft_check_posix.c ft_control_errors.c \
+		  ft_error.c ft_fill_stack.c ft_free_mtx.c ft_issorted.c \
+		  ft_n_rot.c ft_sort.c ft_sort_three.c)
 
-CFLAGS		=	-Wall -Werror -Wextra
+OBJS 		= $(SRC_1:.c=.o) $(SRC_2:.c=.o) $(SRC_3:.c=.o) $(SRC_4:.c=.o)
 
-NAME		=	$(PS_NAME)
+INCLUDE 	= -L ./libft -lft -I$(INCLUDE_PATH)
 
-all: $(NAME) libft/libft.a
+.c.o:
+		${CC} -c $< -o ${<:.c=.o} -I$(INCLUDE_PATH) -I$(LIST_PATH) -I$(MOVES_PATH) -I$(UTILS_PATH)
 
-$(NAME): $(OBJS_1) $(OBJS_2) $(OBJS_3) $(OBJS_4)
-	$(CC) $(CFLAGS) $(OBJS_1) $(OBJS_2) $(OBJS_3) $(OBJS_4) -o $(NAME)
 
-libft/libft.a:
-	make -s -C libft
-	
-%.o: %.c $(INCLUDE)
-	$(CC) $(CFLAGS) -c $< -o $@ -I$(INCLUDE)
+$(NAME):	$(OBJS)
+		make -C $(LIBFT_PATH)
+		$(CC) $(CFLAGS) $(OBJS) $(INCLUDE) -o $(NAME) 
+		
+all: 		$(NAME)
+		
+re :		fclean all
 
 clean:
-	rm -f $(OBJS)
-	make -s -C libft clean
-	
-fclean: clean
-	rm -f $(PS_NAME)
-	make -s -C libft fclean
+		rm -f $(OBJS) $(NAME)
+		make -C $(LIBFT_PATH) clean
+			
+fclean: 	clean
+		rm -f $(NAME)
+		make -C $(LIBFT_PATH) fclean
 
-re: fclean all
-
-.PHONY: all clean fclean re
+.PHONY:	all clean fclean re

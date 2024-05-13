@@ -31,7 +31,7 @@ int	ft_use_rrarrb(t_stack **stack_a, t_stack **stack_b, long n, char c)
 		while ((*stack_b)->num != n)
 			ft_rev_rotate_b(stack_b, 2);
 		while (ft_check_posix_a(*stack_a, n) > 0)
-			ft_rev_rotate_ab(stack_a, 1);
+			ft_rev_rotate_ab(stack_a, stack_b, 0);
 		ft_push_a(stack_a, stack_b, 0);
 	}
 	return (-1);

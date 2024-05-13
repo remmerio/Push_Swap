@@ -15,7 +15,7 @@
 // This function rotates both stack_a and stack_b in the same direction as 
 // required amount.
 
-int	ft_use_rarb(t_stack **stack_a, t_stack stack_b**, long n, char c)
+int	ft_use_rarb(t_stack **stack_a, t_stack **stack_b, long n, char c)
 {
 	if (c == 'a')
 	{
@@ -30,11 +30,11 @@ int	ft_use_rarb(t_stack **stack_a, t_stack stack_b**, long n, char c)
 	else
 	{
 		while ((*stack_b)->num != n && ft_check_posix_a(*stack_a, n) > 0)
-			ft_rotate_ab(a, b, 0);
+			ft_rotate_ab(stack_a, stack_b, 0);
 		while ((*stack_b)->num != n)
 			ft_rotate_b(stack_b, 2);
 		while (ft_check_posix_a(*stack_a, n) > 0)
-			ft_rotate_a(a, 1);
+			ft_rotate_a(stack_a, 1);
 		ft_push_a(stack_a, stack_b, 0);
 	}
 	return (-1);

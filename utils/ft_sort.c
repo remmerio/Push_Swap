@@ -24,11 +24,11 @@ static void	ft_sortbtilla3(t_stack **stack_a, t_stack **stack_b)
 		i = ft_n_rotab(*stack_a, *stack_b);
 		while (i >= 0)
 		{
-			if (i == ft_if_rarb(*stack_a, stack_b, tmp->num))
+			if (i == ft_if_rarb(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rarb(stack_a, stack_b, tmp->num, 'a');
-			else if (i == ft_if_rrarrb(*stack_a, stack_b, tmp->num))
+			else if (i == ft_if_rrarrb(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rrarrb(stack_a, stack_b, tmp->num, 'a');
-			else if (i == ft_if_rarrb(*stack, *stack_b, tmp->num))
+			else if (i == ft_if_rarrb(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rarrb(stack_a, stack_b, tmp->num, 'a');
 			else if (i == ft_if_rrarb(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rrarb(stack_a, stack_b, tmp->num, 'a');
@@ -78,7 +78,7 @@ static t_stack	*ft_sortb(t_stack **stack_a)
 	if (ft_lstlen(*stack_a) > 3 && !ft_issorted(*stack_a))
 		ft_sortbtilla3(stack_a, &stack_b);
 	if (!ft_issorted(*stack_a))
-		ft_sort_three(*stack_a);
+		ft_sort_three(stack_a);
 	return (stack_b);
 }
 
@@ -99,10 +99,10 @@ void	ft_sort(t_stack **stack_a)
 	{
 		stack_b = ft_sortb(stack_a);
 		stack_a = ft_sorta(stack_a, &stack_b);
-		i = ft_check_posix(*stack, ft_nummin(*stack_a));
-		if (i < ft_lstlen*(*stack_a) - i)
+		i = ft_check_posix(*stack_a, ft_nummin(*stack_a));
+		if (i < (int)ft_lstlen(*stack_a) - i)
 		{
-			while ((*stack_a)->num != ft_nummin((*stack_a))
+			while ((*stack_a)->num != ft_nummin((*stack_a)))
 				ft_rotate_a(stack_a, 1);
 		}
 		else

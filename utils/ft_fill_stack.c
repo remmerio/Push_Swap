@@ -23,7 +23,7 @@ t_stack	*ft_fill_stack(int argc, char *argv[])
 	i = 0;
 	if (argc == 2)
 	{
-		mtx = ft_split(argc[1], ' ');
+		mtx = ft_split(argv[1], ' ');
 		argc = ft_mtxlen(mtx);
 	}
 	else

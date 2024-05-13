@@ -31,7 +31,7 @@ int	ft_if_rarrb_a(t_stack *stack_a, t_stack *stack_b, long n)
 
 	i = 0;
 	if (ft_check_posix(stack_b, n))
-		i = ft_lstsize(stack_b) - ft_check_posix(stack_b, n);
+		i = ft_lstlen(stack_b) - ft_check_posix(stack_b, n);
 	i = ft_check_posix_a(stack_a, n) + i;
 	return (i);
 }

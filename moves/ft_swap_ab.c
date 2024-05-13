@@ -30,7 +30,7 @@ void	ft_swap_a(t_stack **stack_a, int i)
 
 // sb: This function swaps the first 2 elements at the top of stack b. Do nothing
 // if there is only one or no elements.
-void	ft_swap_a(t_stack **stack_b, int i)
+void	ft_swap_b(t_stack **stack_b, int i)
 {
 	t_stack	*tmp;
 
@@ -46,7 +46,7 @@ void	ft_swap_a(t_stack **stack_b, int i)
 
 // sa and sb in the same time
 
-void	ft_swap_ab(t_stack **stack_a, t_stack **stack_b int i)
+void	ft_swap_ab(t_stack **stack_a, t_stack **stack_b, int i)
 {
 	if (!*stack_a || !((*stack_a)->next) || !*stack_b || !((*stack_b)->next))
 		return ;

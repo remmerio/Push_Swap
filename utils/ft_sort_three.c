@@ -30,7 +30,7 @@ void	ft_sort_three(t_stack **stack_a)
 	else
 	{
 		if (ft_check_posix(*stack_a, ft_nummax(*stack_a)) == 1)
-			ft_rev_rotate_ra(stack_a, 1);
+			ft_rev_rotate_a(stack_a, 1);
 		else
 			ft_swap_a(stack_a, 1);
 	}

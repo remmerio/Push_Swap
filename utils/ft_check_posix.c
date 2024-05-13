@@ -58,7 +58,7 @@ int	ft_check_posix_a(t_stack *stack_a, long i)
 	if (i < stack_a->num && i > ft_linklast(stack_a)->num)
 		j = 0;
 	else if (i > ft_nummax(stack_a) || i < ft_nummin(stack_a))
-		j = ft_check_index(stack_a, ft_nummin(stack_a));
+		j = ft_check_posix(stack_a, ft_nummin(stack_a));
 	else
 	{
 		tmp = stack_a->next;

@@ -14,7 +14,7 @@
 
 // pa : This function takes the first element at the top of stack_b and put it
 // at the top of stack_a. Do nothing if b is empty.
-void	ft_push_a(t_stack **a, t_stack **b, int i)
+void	ft_push_a(t_stack **stack_a, t_stack **stack_b, int i)
 {
 	t_stack	*tmp;
 

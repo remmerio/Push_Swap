@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/utils.h"
+#include "../includes/push_swap.h"
 #include "../libft/libft.h"
 
 void	ft_free_mtx(char **str)

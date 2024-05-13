@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/utils.h"
-#include "../libft/libft.h"
+#include "../includes/push_swap.h"
 
 void	ft_check(int argc, char *argv[])
 {

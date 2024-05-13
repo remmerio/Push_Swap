@@ -13,7 +13,7 @@
 #include "../includes/push_swap.h"
 
 // This function returns zero if is sorted, otherwise 1.
-int	ft_issorted(t_stack *stack_a);
+int	ft_issorted(t_stack *stack_a)
 {
 	int	i;
 

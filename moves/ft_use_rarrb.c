@@ -26,7 +26,7 @@ int	ft_use_rarrb(t_stack **stack_a, t_stack **stack_b, long n, char c)
 	}
 	else
 	{
-		while (ft_check_posix_(*stack_a, n) > 0)
+		while (ft_check_posix_a(*stack_a, n) > 0)
 			ft_rotate_a(stack_a, 1);
 		while ((*stack_b)->num != n)
 			ft_rev_rotate_b(stack_b, 2);

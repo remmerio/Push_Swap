@@ -13,16 +13,16 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include "../libft/libft.h"
+
 // STACK
 typedef struct node
 {
 	long	num;
 	long	posix;
-	struct node	*next;
-	struct node	*prev;
+	struct	node	*next;
+	struct	node	*prev;
 }	t_stack;
-
-# include "../libft/libft.h"
 
 // MAIN
 int		main(int argc, char *argv[]);

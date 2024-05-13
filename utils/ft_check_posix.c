@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
- 
+
 int	ft_check_posix(t_stack *link, long i)
 {
 	int	j;
@@ -69,5 +69,5 @@ int	ft_check_posix_a(t_stack *stack_a, long i)
 			j++;
 		}
 	}
-	return(j);
+	return (j);
 }

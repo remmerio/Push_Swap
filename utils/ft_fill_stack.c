@@ -12,10 +12,9 @@
 
 #include "../includes/push_swap.h"
 
-static t_stack	*ft_put_n_stack(int i, int argc, char **mtx, t_stack stack_a)
+static t_stack	*ft_put_n_stack(int i, int argc, char **mtx, t_stack *stack_a)
 {
 	long	n;
-	t_stack	*stack_a;
 
 	n = 0;
 	while (i < argc)

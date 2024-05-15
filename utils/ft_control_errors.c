@@ -18,18 +18,25 @@ static int	ft_duplicates_arg(char *mtx[])
 	int	i;
 	int	j;
 	int	k;
+	int	m;
 
 	i = 0;
 	while (mtx[i])
 	{
 		k = 0;
-		if (mtx[i][k] == '+')
+		while (mtx[i][k] == '+')
 			k++;
-		j = 1;
+		j = 0;
 		while (mtx[j])
 		{
-			if (mtx[i] == mtx[j])
-				return (1);
+			if (j != i)
+			{
+				m = 0;
+				while (mtx[j][m] == '+')
+					m++;
+				if (ft_strncmp(mtx[i], mtx[j], 50) == 0)
+					return (1);
+			}
 			j++;
 		}
 		i++;

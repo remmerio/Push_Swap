@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-include "../includes/push_swap."
+#include "../includes/push_swap.h"
 
 // rb: This function shift up all elements of stack_b by 1. The first element
 // becomes the last one.
-void	ft_rotate_a(t_stack **stack_b, int i)
+void	ft_rotate_b(t_stack **stack_b, int i)
 {
 	t_stack	*tmp;
 
@@ -51,8 +51,8 @@ void	ft_rotate_ab(t_stack **stack_a, t_stack **stack_b, int i)
 {
 	if (!stack_a || !((*stack_a)->next) || !stack_b || !((*stack_b)->next))
 		return ;
-	ft_rotate_a(t_stack stack_a, i);
-	ft_rotate_b(t_stack stack_b, i);
+	ft_rotate_a(stack_a, i);
+	ft_rotate_b(stack_b, i);
 	if (i == 0)
 		ft_putendl_fd("rr", 1);
 }

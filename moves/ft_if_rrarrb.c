@@ -32,15 +32,15 @@ int	ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long n)
 
 // This function calculates the required amount of rotation.
 // Calculations are done for rra+rrb case.
-int	ft_if_rrarrb_a(t_stack *a, t_stack *b, long n)
+int	ft_if_rrarrb_a(t_stack *stack_a, t_stack *stack_b, long n)
 {
 	int	i;
 
 	i = 0;
 	if (ft_check_posix_a(stack_a, n))
-		i = ft_lstsize(stack_a) - ft_check_posix_a(stack_a, n);
-	if (i < (ft_lstsize(stack_b) - ft_check_posix(stack_b, n))
+		i = ft_lstlen(stack_a) - ft_check_posix_a(stack_a, n);
+	if (i < (ft_lstlen(stack_b) - ft_check_posix(stack_b, n))
 		&& ft_check_posix(stack_b, n))
-		i = ft_lstsize(stack_b) - ft_check_posix(stack_b, n);
+		i = ft_lstlen(stack_b) - ft_check_posix(stack_b, n);
 	return (i);
 }

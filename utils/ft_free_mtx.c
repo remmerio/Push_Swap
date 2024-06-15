@@ -17,8 +17,8 @@ void	ft_free_mtx(char **str)
 {
 	ssize_t	i;
 
-	i = ft_mtxlen(str);
-	while (i > 0)
+	i = ft_mtxlen(str) - 1;
+	while (i >= 0)
 		free(str[i--]);
 	free(str);
 }

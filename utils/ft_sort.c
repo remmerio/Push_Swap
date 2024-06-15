@@ -15,7 +15,7 @@
 // This function sort and push stacks until 3 members left behind.
 static void	ft_sortbtilla3(t_stack **stack_a, t_stack **stack_b)
 {
-	int		i;
+	int	i;
 	t_stack	*tmp;
 
 	while (ft_lstlen(*stack_a) > 3 && !ft_issorted(*stack_a))
@@ -24,13 +24,13 @@ static void	ft_sortbtilla3(t_stack **stack_a, t_stack **stack_b)
 		i = ft_n_rotab(*stack_a, *stack_b);
 		while (i >= 0)
 		{
-			if (i == ft_if_rarb(*stack_a, *stack_b, tmp->num))
+			if (i == (int)ft_if_rarb(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rarb(stack_a, stack_b, tmp->num, 'a');
-			else if (i == ft_if_rrarrb(*stack_a, *stack_b, tmp->num))
+			else if (i == (int)ft_if_rrarrb(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rrarrb(stack_a, stack_b, tmp->num, 'a');
-			else if (i == ft_if_rarrb(*stack_a, *stack_b, tmp->num))
+			else if (i == (int)ft_if_rarrb(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rarrb(stack_a, stack_b, tmp->num, 'a');
-			else if (i == ft_if_rrarb(*stack_a, *stack_b, tmp->num))
+			else if (i == (int)ft_if_rrarb(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rrarb(stack_a, stack_b, tmp->num, 'a');
 			else
 				tmp = tmp->next;
@@ -49,13 +49,13 @@ static t_stack	**ft_sorta(t_stack **stack_a, t_stack **stack_b)
 		i = ft_n_rotba(*stack_a, *stack_b);
 		while (i >= 0)
 		{
-			if (i == ft_if_rarb_a(*stack_a, *stack_b, tmp->num))
+			if (i == (int)ft_if_rarb_a(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rarb(stack_a, stack_b, tmp->num, 'b');
-			else if (i == ft_if_rarrb_a(*stack_a, *stack_b, tmp->num))
+			else if (i == (int)ft_if_rarrb_a(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rarrb(stack_a, stack_b, tmp->num, 'b');
-			else if (i == ft_if_rrarrb_a(*stack_a, *stack_b, tmp->num))
+			else if (i == (int)ft_if_rrarrb_a(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rrarrb(stack_a, stack_b, tmp->num, 'b');
-			else if (i == ft_if_rrarb_a(*stack_a, *stack_b, tmp->num))
+			else if (i == (int)ft_if_rrarb_a(*stack_a, *stack_b, tmp->num))
 				i = ft_use_rrarb(stack_a, stack_b, tmp->num, 'b');
 			else
 				tmp = tmp->next;

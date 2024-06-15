@@ -17,9 +17,9 @@
 // rotation. Since here we have reverse rotate,rather than index number,
 // we check reverse index number which is 
 // calculated by list_size - index_number.
-int	ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long n)
+size_t	ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long n)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
 	if (ft_check_posix_b(stack_b, n))
@@ -32,9 +32,9 @@ int	ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long n)
 
 // This function calculates the required amount of rotation.
 // Calculations are done for rra+rrb case.
-int	ft_if_rrarrb_a(t_stack *stack_a, t_stack *stack_b, long n)
+size_t	ft_if_rrarrb_a(t_stack *stack_a, t_stack *stack_b, long n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (ft_check_posix_a(stack_a, n))

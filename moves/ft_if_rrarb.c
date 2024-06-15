@@ -14,9 +14,9 @@
 
 // This function returns an integer equal to how many times the stacks rotate 
 // together.
-int	ft_if_rrarb(t_stack *stack_a, t_stack *stack_b, long n)
+size_t	ft_if_rrarb(t_stack *stack_a, t_stack *stack_b, long n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (ft_check_posix(stack_a, n))
@@ -27,9 +27,9 @@ int	ft_if_rrarb(t_stack *stack_a, t_stack *stack_b, long n)
 
 // This function calculates the required amount of rotation.
 // Calculations are done for rra+rb case.
-int	ft_if_rrarb_a(t_stack *stack_a, t_stack *stack_b, long n)
+size_t	ft_if_rrarb_a(t_stack *stack_a, t_stack *stack_b, long n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (ft_check_posix_a(stack_a, n))

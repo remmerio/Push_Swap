@@ -50,14 +50,14 @@ void	ft_rev_rotate_b(t_stack **stack_a, int i);
 void	ft_rev_rotate_ab(t_stack **stack_a, t_stack **stack_b, int i);
 
 /* --- CASE FUNCTIONS --- */
-int		ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long n);
-int		ft_if_rrarrb_a(t_stack *stack_a, t_stack *stack_b, long n);
-int		ft_if_rarb(t_stack *stack_a, t_stack *stack_b, long n);
-int		ft_if_rarb_a(t_stack *stack_a, t_stack *stack_b, long n);
-int		ft_if_rarrb(t_stack *stack_a, t_stack *stack_b, long n);
-int		ft_if_rarrb_a(t_stack *stack_a, t_stack *stack_b, long n);
-int		ft_if_rrarb(t_stack *stack_a, t_stack *stack_b, long n);
-int		ft_if_rrarb_a(t_stack *stack_a, t_stack *stack_b, long n);
+size_t		ft_if_rrarrb(t_stack *stack_a, t_stack *stack_b, long n);
+size_t		ft_if_rrarrb_a(t_stack *stack_a, t_stack *stack_b, long n);
+size_t		ft_if_rarb(t_stack *stack_a, t_stack *stack_b, long n);
+size_t		ft_if_rarb_a(t_stack *stack_a, t_stack *stack_b, long n);
+size_t		ft_if_rarrb(t_stack *stack_a, t_stack *stack_b, long n);
+size_t		ft_if_rarrb_a(t_stack *stack_a, t_stack *stack_b, long n);
+size_t		ft_if_rrarb(t_stack *stack_a, t_stack *stack_b, long n);
+size_t		ft_if_rrarb_a(t_stack *stack_a, t_stack *stack_b, long n);
 
 /* --- APPLY FUNCTIONS --- */
 int		ft_use_rrarrb(t_stack **stack_a, t_stack **stack_b, long n, char c);
@@ -78,12 +78,12 @@ void	ft_sort(t_stack **stack_a);
 void	ft_sort_three(t_stack **stack_a);
 
 /* --- POSITION CHECKS --- */
-int		ft_check_posix(t_stack *link, long i);
-int		ft_check_posix_a(t_stack *stack_a, long i);
-int		ft_check_posix_b(t_stack *stack_b, long i);
+size_t		ft_check_posix(t_stack *link, long i);
+size_t		ft_check_posix_a(t_stack *stack_a, long i);
+size_t		ft_check_posix_b(t_stack *stack_b, long i);
 
 /* --- COUNT ROTATION CHECKS --- */
-int		ft_n_rotba(t_stack *stack_a, t_stack *stack_b);
-int		ft_n_rotab(t_stack *stack_a, t_stack *stack_b);
+size_t		ft_n_rotba(t_stack *stack_a, t_stack *stack_b);
+size_t		ft_n_rotab(t_stack *stack_a, t_stack *stack_b);
 
 #endif

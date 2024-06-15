@@ -12,9 +12,9 @@
 
 #include "../includes/push_swap.h"
 
-int	ft_check_posix(t_stack *link, long i)
+size_t	ft_check_posix(t_stack *link, long i)
 {
-	int	j;
+	size_t	j;
 
 	j = 0;
 	while (link->num != i)
@@ -26,9 +26,9 @@ int	ft_check_posix(t_stack *link, long i)
 	return (j);
 }
 
-int	ft_check_posix_b(t_stack *stack_b, long i)
+size_t	ft_check_posix_b(t_stack *stack_b, long i)
 {
-	int		j;
+	size_t		j;
 	t_stack	*tmp;
 
 	j = 1;
@@ -49,9 +49,9 @@ int	ft_check_posix_b(t_stack *stack_b, long i)
 	return (j);
 }
 
-int	ft_check_posix_a(t_stack *stack_a, long i)
+size_t	ft_check_posix_a(t_stack *stack_a, long i)
 {
-	int		j;
+	size_t		j;
 	t_stack	*tmp;
 
 	j = 1;

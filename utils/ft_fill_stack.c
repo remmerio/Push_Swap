@@ -31,20 +31,23 @@ t_stack	*ft_fill_stack(int argc, char *argv[])
 	t_stack	*stack_a;
 	char	**mtx;
 	int		i;
+	size_t	len;
 
 	stack_a = NULL;
 	i = 0;
+	len = 0;
 	if (argc == 2)
 	{
 		mtx = ft_split(argv[1], ' ');
-		argc = ft_mtxlen(mtx);
+		len = ft_mtxlen(mtx);
 	}
 	else
 	{
-		mtx = argv;
+		len = argc;
+		mtx = (char **)malloc(sizeof(char *) * len);
 		i = 1;
 	}
-	stack_a = ft_put_n_stack(i, argc, mtx, stack_a);
+	stack_a = ft_put_n_stack(i, len, mtx, stack_a);
 	ft_free_mtx(mtx);
 	return (stack_a);
 }

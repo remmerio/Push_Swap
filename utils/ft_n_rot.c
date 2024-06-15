@@ -16,9 +16,9 @@
 // use to sort the stack. Of course, after rotation there is always one push
 // operation is left to do which i embeded to code. Function is used during push
 // from B to A.
-int	ft_n_rotba(t_stack *stack_a, t_stack *stack_b)
+size_t	ft_n_rotba(t_stack *stack_a, t_stack *stack_b)
 {
-	int		i;
+	size_t		i;
 	t_stack	*tmp;
 
 	tmp = stack_b;
@@ -43,9 +43,9 @@ int	ft_n_rotba(t_stack *stack_a, t_stack *stack_b)
 // course, after rotation there is always one push
 // operation is left to do which i embeded to code.
 // Function is used during push from A to B.
-int	ft_n_rotab(t_stack *stack_a, t_stack *stack_b)
+size_t	ft_n_rotab(t_stack *stack_a, t_stack *stack_b)
 {
-	int		i;
+	size_t		i;
 	t_stack	*tmp;
 
 	tmp = stack_a;
